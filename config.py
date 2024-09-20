@@ -1,4 +1,5 @@
 from models.author import Author, Base
+from models.book import Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
