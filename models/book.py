@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, Boolean, ForeignKey
-from models.base import Base
 from sqlalchemy.orm import relationship
+from models.base import Base
 
 class Book(Base):
     __tablename__ = 'books'
@@ -11,3 +11,4 @@ class Book(Base):
     author_id = Column(Integer, ForeignKey('authors.id'))
     
     author = relationship('Author', back_populates='books')
+    transactions = relationship('Transaction', back_populates='book')
