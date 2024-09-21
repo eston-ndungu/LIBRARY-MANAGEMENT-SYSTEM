@@ -7,7 +7,7 @@ class Book(Base):
     
     id = Column(Integer, primary_key=True)
     title = Column(String)
-    is_available = Column(Boolean, default=True)
+    availability_status = Column(Boolean, default=True)
     author_id = Column(Integer, ForeignKey('authors.id'))
     
     author = relationship('Author', back_populates='books')
