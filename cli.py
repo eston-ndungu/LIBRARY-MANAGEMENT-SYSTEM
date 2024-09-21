@@ -1,15 +1,16 @@
-from cli_mthods import add_author, view_authors, add_book, view_books
+from cli_methods import view_authors, view_books, add_book, view_borrowers, view_transactions
 
-# CLI Menu
 def menu():
-    print("\n Welcome to Library Management System. What would you like to do today?")
+    print("\nWelcome to the Library Management System. What would you like to do today?")
     print("1. View Books")
     print("2. View Authors")
     print("3. Add Book")
-    print("4. Add Author")
+    print("4. View Borrowers")
+    print("5. View Transactions")
+    print("6. Checkout Book")
+    print("7. Return Book")
     print("0. Exit")
 
-# Main function to control menu flow
 def main():
     while True:
         menu()
@@ -22,13 +23,18 @@ def main():
         elif choice == "3":
             add_book()
         elif choice == "4":
-            add_author()
+            view_borrowers()
+        elif choice == "5":
+            view_transactions()
+        elif choice == "6":
+            checkout_book()
+        elif choice == "7":
+            return_book()
         elif choice == "0":
             print("Exiting the system.")
             break
         else:
             print("Invalid choice. Please try again.")
 
-# Run the main function
 if __name__ == "__main__":
     main()
