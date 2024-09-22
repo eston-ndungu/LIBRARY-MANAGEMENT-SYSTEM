@@ -1,4 +1,4 @@
-from cli_methods import view_authors, view_books, add_book, view_borrowers, view_transactions
+from cli_methods import view_authors, view_books, add_book, view_borrowers, checkout_book, view_transactions, return_book
 
 def menu():
     print("\nWelcome to the Library Management System. What would you like to do today?")
